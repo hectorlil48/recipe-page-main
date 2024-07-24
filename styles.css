@@ -20,7 +20,7 @@
 body {
   background-color: var(--stone-100);
   font-family: "Outfit", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--stone-600);
   font-weight: 300;
   line-height: 150%;
@@ -36,7 +36,7 @@ img {
 }
 
 li {
-  padding-left: 14px;
+  padding-left: 16px;
   font-family: inherit;
   font-size: inherit;
   font-weight: 300;
@@ -50,14 +50,16 @@ li::marker {
 
 ul,
 ol {
-  padding-left: 20px;
+  padding-left: 24px;
 }
 
 .container {
   width: 736px;
   background-color: var(--white);
   border-radius: 24px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 40px;
+  transition: width 0.3s ease, max-width 0.3s ease;
 }
 
 /* Recipe Image */
@@ -75,8 +77,8 @@ ol {
 
 .title {
   font-family: "Young Serif", serif;
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 2.5rem;
+  font-weight: 300;
   line-height: 100%;
   margin-bottom: 24px;
   color: var(--stone-900);
@@ -94,14 +96,14 @@ ol {
 
 .prep-time h2 {
   color: var(--rose-800);
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 500;
   line-height: 100%;
   margin-bottom: 16px;
 }
 
 .bold {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /* Ingredients */
@@ -114,12 +116,12 @@ ol {
 }
 
 .ingredients li::marker {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .sub-title {
   font-family: "Young Serif", serif;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 300;
   line-height: 100%;
   margin-bottom: 24px;
@@ -129,14 +131,74 @@ ol {
 /* Instructions */
 
 .instructions li::marker {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
 }
 
-/* .attribution {
-  font-size: 11px;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+tr {
+  border-bottom: 1px solid var(--stone-150);
+}
+
+td {
+  padding: 10px 0 10px 30px;
+}
+
+.last-row {
+  border-bottom: none;
+}
+
+.last-row td {
+  padding-bottom: 0;
+}
+
+.weight {
+  font-weight: 600;
+  color: var(--brown-800);
+  padding-right: 20px;
+}
+
+.attribution {
+  margin-top: 10px;
+  font-size: 0.875rem;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-} */
+}
+
+@media (max-width: 780px) {
+  .container {
+    width: 616px;
+  }
+}
+
+@media (max-width: 625px) {
+  .container {
+    width: 375px;
+    border-radius: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .recipe-img {
+    border-radius: none;
+  }
+
+  .recipe-desc {
+    margin-top: 0;
+  }
+
+  .wrapper {
+    padding: 26px 32px 40px;
+  }
+
+  .title {
+    font-size: 2.25rem;
+  }
+}
