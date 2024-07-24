@@ -24,7 +24,7 @@ body {
   color: var(--stone-600);
   font-weight: 300;
   line-height: 150%;
-  min-height: 100vh;
+  min-height: 150vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,13 +39,13 @@ li {
   padding-left: 14px;
   font-family: inherit;
   font-size: inherit;
+  font-weight: 300;
   color: inherit;
-  line-height: inherit;
+  line-height: 180%;
 }
 
 li::marker {
   color: var(--rose-800);
-  font-size: 12px;
 }
 
 ul,
@@ -106,22 +106,32 @@ ol {
 
 /* Ingredients */
 
-.ingredients {
+.ingredients,
+.instructions {
   border-bottom: 1px solid var(--stone-150);
   margin: 32px 0;
   padding-bottom: 32px;
 }
 
+.ingredients li::marker {
+  font-size: 12px;
+}
+
 .sub-title {
   font-family: "Young Serif", serif;
   font-size: 28px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 100%;
   margin-bottom: 24px;
   color: var(--brown-800);
 }
 
 /* Instructions */
+
+.instructions li::marker {
+  font-size: 16px;
+  font-weight: 500;
+}
 
 /* .attribution {
   font-size: 11px;
